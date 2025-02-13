@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         textElement.textContent = "That was easy, wasn't it? <3 ❤️";
     });
 
-   
+    // Адаптация кнопок на мобильных устройствах
     function adjustButtonLayout() {
         if (window.innerWidth < 600) {
             btnContainer.style.display = "flex";
@@ -45,4 +45,3 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustButtonLayout();
     window.addEventListener("resize", adjustButtonLayout);
 });
-м
