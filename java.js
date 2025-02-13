@@ -13,17 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
             noClickCount++;
         }
         if (noClickCount === noTexts.length) {
-            noButton.style.display = "none";
+            noButton.style.visibility = "hidden";
         }
     });
 
     yesButton.addEventListener("click", function () {
-        yesButton.style.display = "none";
+        yesButton.style.visibility = "hidden";
         noButton.style.display = "none";
         textElement.textContent = "That was easy, wasn't it? <3 ❤️";
     });
 
-    // Адаптация 
+   
     function adjustButtonLayout() {
         if (window.innerWidth < 600) {
             btnContainer.style.display = "flex";
@@ -45,3 +45,4 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustButtonLayout();
     window.addEventListener("resize", adjustButtonLayout);
 });
+м
