@@ -2,22 +2,38 @@ document.addEventListener("DOMContentLoaded", function () {
     const yesButton = document.getElementById("yesButton");
     const noButton = document.getElementById("noButton");
     const btnContainer = document.getElementById("btnContainer");
-    const textDiv = document.querySelector(".text");
-
-    let noButtonTexts = ["Are you sure?", "Are you really sure?", "Pookie please..." , "Just think about it!!", " I will be sad...", ":("];
+    const textElement = document.querySelector(".text p");
+    
     let noClickCount = 0;
-
-    yesButton.addEventListener("click", function () {
-        textDiv.innerHTML = "<p>Omg I knew it! <3 ❤️</p>"; 
-        btnContainer.style.display = "none";
-    });
+    const noTexts = ["Are you sure?", "Are you really sure?", "Pookie please...", "Just think about it!", "I will be sad!, ":("];
 
     noButton.addEventListener("click", function () {
-        if (noClickCount < noButtonTexts.length) {
-            noButton.innerText = noButtonTexts[noClickCount]; 
+        if (noClickCount < noTexts.length) {
+            noButton.textContent = noTexts[noClickCount];
             noClickCount++;
-        } else {
+        }
+        if (noClickCount === noTexts.length) {
             noButton.style.display = "none";
         }
     });
+
+    yesButton.addEventListener("click", function () {
+        btnContainer.style.display = "none";
+        textElement.textContent = "That was easy, wasn't it? <3 ❤️";
+    });
+
+    // Адаптация
+    function adjustButtonLayout() {
+        if (window.innerWidth < 600) {
+            btnContainer.style.display = "flex";
+            btnContainer.style.flexDirection = "column";
+            btnContainer.style.alignItems = "center";
+        } else {
+            btnContainer.style.display = "block";
+        }
+    }
+    
+    adjustButtonLayout();
+    window.addEventListener("resize", adjustButtonLayout);
 });
+
