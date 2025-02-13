@@ -41,14 +41,9 @@ img {
 .btn:hover {
     background-color: #614a37;
 }
-@media (max-width:768px) {
-    .btn-container {
-        flex-direction: column;
-        align-items: center;
-        gap:10px;
-    }
+@media (max-width:480px) {
     button {
-        width: 80%;
-        max-width: 300px;
+        font-size: 16px;
+        padding: 1opx;
     }
 }
