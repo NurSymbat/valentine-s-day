@@ -17,7 +17,7 @@ img {
 .text-time {
     text-align: center;
 }
-#btn-container {
+.btn-container {
     margin-top: 20px;
 }
 #yesButton {
@@ -43,14 +43,14 @@ img {
 }
 
 @media (max-width:480px) {
-    #btn-Container {
-        width: 90%;
-        gap:10px;
-    } 
-    #yesButton, #noButton {
-        width: 100%;
-        max-width: 280px;
+    .btn-Container {
+        gap: 20px;
+    }
+    button {
+        width: 60%;
+        max-width: 300px;
         font-size: 16px;
         padding: 12px;
+        
     }
 }
