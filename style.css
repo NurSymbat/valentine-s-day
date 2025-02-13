@@ -38,6 +38,9 @@ img {
     transition: background-color 0.3s linear;;
     font-size: 18px;
 }
+.btn:hover {
+    background-color: #614a37;
+}
 
 @media (max-width:480px) {
     #btn-Container {
