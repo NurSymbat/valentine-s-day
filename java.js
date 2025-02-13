@@ -29,7 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
             btnContainer.style.display = "flex";
             btnContainer.style.flexDirection = "column";
             btnContainer.style.alignItems = "center";
+            btnContainer.style.gap = "10px";
         } else {
+            btnContainer.style.display = "flex";
+            btnContainer.style.flexDirection = "row";
+            btnContainer.style.justifyContent = "center";
+            btnContainer.style.gap = "20px";
+        }
+    } else {
             btnContainer.style.display = "flex";
             btnContainer.style.flexDirection = "row";
         }
