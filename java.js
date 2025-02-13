@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.querySelector(".text p");
     
     let noClickCount = 0;
-    const noTexts = ["Are you sure?", "Are you really sure?", "Pookie please...", "Just think about it!", "I will be sad!", ":(", "I khow you want"];
+    const noTexts = ["Are you sure?", "Are you really sure?", "Pookie please...", "Just think about it!", "I will be sad!", "I khow you want", "I know"];
 
     noButton.addEventListener("click", function () {
         if (noClickCount < noTexts.length) {
