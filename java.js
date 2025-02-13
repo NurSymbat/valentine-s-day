@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.querySelector(".text p");
     
     let noClickCount = 0;
-    const noTexts = ["Are you sure?", "Are you really sure?", "Pookie please...", "Just think about it!", "I will be sad!, ":("];
+    const noTexts = ["Are you sure?", "Are you really sure?", "Pookie please...", "Just think about it!", "I will be sad!", ":("];
 
     noButton.addEventListener("click", function () {
         if (noClickCount < noTexts.length) {
@@ -18,22 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     yesButton.addEventListener("click", function () {
-        btnContainer.style.display = "none";
+        yesButton.style.display = "none";
+        noButton.style.display = "none";
         textElement.textContent = "That was easy, wasn't it? <3 ❤️";
     });
 
-    // Адаптация
+    // Адаптация 
     function adjustButtonLayout() {
         if (window.innerWidth < 600) {
             btnContainer.style.display = "flex";
             btnContainer.style.flexDirection = "column";
             btnContainer.style.alignItems = "center";
         } else {
-            btnContainer.style.display = "block";
+            btnContainer.style.display = "flex";
+            btnContainer.style.flexDirection = "row";
         }
     }
     
     adjustButtonLayout();
     window.addEventListener("resize", adjustButtonLayout);
 });
-
