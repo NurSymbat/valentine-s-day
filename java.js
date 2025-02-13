@@ -22,26 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         noButton.style.display = "none";
         textElement.textContent = "That was easy, wasn't it? <3 ❤️";
     });
-
-    // Адаптация кнопок на мобильных устройствах
-    function adjustButtonLayout() {
-        if (window.innerWidth < 600) {
-            btnContainer.style.display = "flex";
-            btnContainer.style.flexDirection = "column";
-            btnContainer.style.alignItems = "center";
-            btnContainer.style.gap = "10px";
-        } else {
-            btnContainer.style.display = "flex";
-            btnContainer.style.flexDirection = "row";
-            btnContainer.style.justifyContent = "center";
-            btnContainer.style.gap = "20px";
-        }
-    } else {
-            btnContainer.style.display = "flex";
-            btnContainer.style.flexDirection = "row";
-        }
-    }
     
-    adjustButtonLayout();
-    window.addEventListener("resize", adjustButtonLayout);
 });
+
