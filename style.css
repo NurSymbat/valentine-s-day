@@ -42,15 +42,3 @@ img {
     background-color: #614a37;
 }
 
-@media (max-width:480px) {
-    .btn-Container {
-        gap: 20px;
-    }
-    button {
-        width: 60%;
-        max-width: 300px;
-        font-size: 16px;
-        padding: 12px;
-        
-    }
-}
